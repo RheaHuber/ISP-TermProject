@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<!-- prj.html This describes the collection homepage, administrator login, and search tool
+     -->
+
+<html lang="en">
+<head>
+    <title> Fanfiction Recommendations </title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        h1, h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        A Curated Collection of Recommended Fanfiction
+    </h1>
+    <h3>
+        Because for every diamond, there's a lot of rough
+    </h3>
+    <hr />
+    <a href="README.txt">
+        <p>Click here for a quick how-to</p>
+    </a>
+    <a href="ISP-Project-Final-Report.pdf" download>
+        <p>Or here for a description of this project</p>
+    </a>
+    <a href="ISPFinalProject.pptx" download>
+        <p>Or here for a slideshow presentation</p>
+    </a>
+    <hr />
+
+    <!-- Administrator Login -->
+    <form action="http://localhost/isp/prj/login.php" method="post">
+        <!-- Username and Password -->
+        <h3 style="text-align: left;">Log in as Administrator</h3>
+        <label for="username">Username:</label><br />
+        <input type="text" name="username" />
+        <br /><label for="password">Password:</label><br />
+        <input type="password" name="password" />
+
+        <!-- The submit and reset buttons -->
+        <p>
+            <input type="submit" value="Login" />
+            <input type="reset" value="Clear" />
+        </p>
+        <hr />
+    </form>
+
+    <!-- Search tool -->
+    <h3 style="text-align: left;">Search the Collection</h3>
+    <form action="http://localhost/isp/prj/prj.php" method="post">
+        <!-- Search bar -->
+        <label for="search">Input your search terms (separated by a comma and space):</label><br />
+        <input type="text" name="search" size="50"/>
+
+        <!-- Search by Title/Author -->
+        <br /><br /><label for="title">Work Title:</label><br />
+        <input type="text" name="title" />
+        <br /><label for="author">Author Name:</label><br />
+        <input type="text" name="author" />
+
+        <!-- Word Count Limits -->
+        <br /><br /><label for="minWords">Word Count Minimum:</label><br />
+        <input type="number" name="minWords" />
+        <br /><label for="maxWords">Word Count Maximum:</label><br />
+        <input type="number" name="maxWords" />
+
+        <!-- Choose order to output results -->
+        <br /><br /><label for="order">Sort By:</label><br />
+        <select name="order">
+            <option value="title">Title</option>
+            <option value="author">Author</option>
+            <option value="length">Word Count</option>
+        </select>
+
+        <!-- The submit and reset buttons -->
+        <p>
+            <input type="submit" value="Search" />
+            <input type="reset" value="Clear" />
+        </p>
+    </form>
+</body>
+</html>
